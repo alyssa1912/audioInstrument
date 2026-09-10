@@ -13,7 +13,6 @@ document.addEventListener("keydown", function(event) {
 
 
     if (event.key.toLowerCase() === "b") {
-
         snapSound.play();
     }
 
