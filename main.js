@@ -34,24 +34,31 @@ introModal.addEventListener("close", toneInit);
 // });
 
 
-////// Tone
 
-// create instrument
-const synth = new Tone.Synth();
 
-function toneInit(){
-    // connect synth to audio output
-    synth.connect(Tone.Destination);
-}
 
-function playNote(e){
-    // find the element that the event ran on
-    let keyPressed = e.target;
-    console.log(keyPressed);
-    // find the data-note attribute of that element
-    let note = keyPressed.dataset.note;
-    console.log(note);
-}
+// ------------------------------------------------
 
-testButton.addEventListener("mousedown", playNote);
-key.addEventListener("mousedown", playNote);
+
+const snapSound = new Audio("sounds/Asnap.mp3");
+
+const snapSound = new Audio("sounds/Asnap.mp3");
+
+document.addEventListener("keydown", function(event) {
+
+    // Check if the physical keyboard key pressed is A
+    if (event.key.toLowerCase() === "a") {
+
+        snapSound.play();
+    }
+
+
+    if (event.key.toLowerCase() === "b") {
+        snapSound.play();
+    }
+
+});
+
+
+// two different areas for imporvement, 1. the aesthetic & visuals 2. randomness.
+// create three branches for each improvement, meaning total 6 branches.
