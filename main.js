@@ -1,17 +1,6 @@
 // MODAL ------------------------- 
 
 
-// show modal on page load
-introModal.showModal();
-
-// when OK clicked, modal closes
-introModalCloseButton.addEventListener("click", function closeIntroModal(){
-
-    introModal.close();
-});
-
-
-
 
 // find my test button              const testButton = document.getElementById("test-button");
 // find my key test button          const key = document.getElementById("key-test");
@@ -25,24 +14,21 @@ const introModal = document.getElementById("intro-modal");
 // find modal close button
 const introModalCloseButton = document.getElementById("intro-modal-close");
 
-// is the mouse button held?        let mouseButtonDown = false;
 
-//introdialog.showModal();
-
-////// Modal
-// browser loads html 
-// user can also close modal with esc key
 // show modal on page load
 introModal.showModal();
 
-// when ok clicked, modal closes
-introModalCloseButton.addEventListener("click", function closeIntroModal(){
-// closes modal
-    introModal.close();
+// when OK clicked, modal closes
+introModalCloseButton.addEventListener("click", function closeIntroModal(){    
+// closes modal     
+introModal.close();     
 });
 
-// when dialog closes by whatever means, load audio system
-introModal.addEventListener("close", Tone.start);
+
+
+
+
+// when dialog closes by whatever means, load audio system              introModal.addEventListener("close", Tone.start);
 
 // introModalCloseButton.addEventListener("click", () => {
 //    introModal.close();
