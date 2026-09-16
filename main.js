@@ -1,5 +1,6 @@
 
 // document.body.style.backgroundColor = "red";
+
 // find my test button
 const testButton = document.getElementById("test-button");
 // find my key test button
@@ -11,23 +12,25 @@ const introModal = document.getElementById("intro-modal");
 const introModalCloseButton = document.getElementById("intro-modal-close");
 
 // is the mouse button held?
-let mouseButtonDown = false;
+// let mouseButtonDown = false;
 
 //introdialog.showModal();
 //document.body.style.backgroundColor = "red";
 
 ////// Modal
-// browser loads html > browser loads js > js to open modal > user presses ok on modal > modal closes > audio init
+// browser loads html 
 // user can also close modal with esc key
 // show modal on page load
 introModal.showModal();
-// when ok clicked, close modal
+
+// when ok clicked, modal closes
 introModalCloseButton.addEventListener("click", function closeIntroModal(){
-    // close our modal
+// closes modal
     introModal.close();
 });
+
 // when dialog closes by whatever means, load audio system
-introModal.addEventListener("close", toneInit);
+introModal.addEventListener("close", Tone.start());
 
 // introModalCloseButton.addEventListener("click", () => {
 //    introModal.close();
@@ -55,3 +58,28 @@ function playNote(e){
 
 testButton.addEventListener("mousedown", playNote);
 key.addEventListener("mousedown", playNote);
+
+
+
+const snapSound = new Audio("sounds/Asnap.mp3");
+
+const snapSound = new Audio("sounds/Asnap.mp3");
+
+document.addEventListener("keydown", function(event) {
+
+    // Check if the physical keyboard key pressed is A
+    if (event.key.toLowerCase() === "a") {
+
+        snapSound.play();
+    }
+
+
+    if (event.key.toLowerCase() === "b") {
+        snapSound.play();
+    }
+
+});
+
+
+// two different areas for imporvement, 1. the aesthetic & visuals 2. randomness.
+// create three branches for each improvement, meaning total 6 branches.
