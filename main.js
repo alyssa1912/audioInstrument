@@ -24,18 +24,6 @@ introModal.close();
 
 
 
-
-// when dialog closes by whatever means, load audio system              introModal.addEventListener("close", Tone.start);
-
-// introModalCloseButton.addEventListener("click", () => {
-//    introModal.close();
-// });
-
-
-
-
-
-
 // This is the instrument ------------------------ //
 
 // const snapSound = new Audio("sounds/Asnap.mp3");
@@ -52,11 +40,16 @@ document.addEventListener("keydown", function(event) {
 
 
     if (event.key.toLowerCase() === "b") {
-        
-        const snapSound = new Audio("sounds/Asnap.mp3");
-        snapSound.play();
+
+        const chimeSound = new Audio("sounds/Bchime.mp3");
+        chimeSound.play();
     }
 
+    if (event.key.toLowerCase() === "c") {
+
+        const bubbleSound = new Audio("sounds/Cbubble.mp3");
+        bubbleSound.play();
+    }
 });
 
 
