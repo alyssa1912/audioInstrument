@@ -41,8 +41,8 @@ document.addEventListener("keydown", function(event) {
 
     if (event.key.toLowerCase() === "b") {
 
-        const chimeSound = new Audio("sounds/Bchime.mp3");
-        chimeSound.play();
+        const snapSound = new Audio("sounds/Asnap.mp3");
+        snapSound.play();
     }
 
     if (event.key.toLowerCase() === "c") {
@@ -56,7 +56,13 @@ document.addEventListener("keydown", function(event) {
 // two different areas for imporvement, 1. the aesthetic & visuals 2. randomness.
 // create 3 branches for each improvement, meaning total 6 branches.
 
-//----------letters---------
+//----------colour change---------
+
+document.addEventListener("keydown", (event) => {
+    const key = event.key.toLowerCase();
+
+    document.body.style.backgroundColor = keyColours[key];
+});
 
  const keyColours = {
     a: "#ff9ecf",
@@ -78,7 +84,7 @@ document.addEventListener("keydown", function(event) {
     q: "#facc15",
     r: "#fb7185",
     s: "#60a5fa",
-    t: "#34d399",
+    t: "#34abd3",
     u: "#c084fc",
     v: "#f9a8d4",
     w: "#fde68a",
@@ -86,3 +92,4 @@ document.addEventListener("keydown", function(event) {
     y: "#86efac",
     z: "#f0abfc"
 };
+

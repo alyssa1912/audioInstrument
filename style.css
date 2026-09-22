@@ -38,3 +38,10 @@ dialog[open] {
 button {
     border: var(--border);
 }
+
+
+/* ---Visuals--- */
+
+body {
+    transition: background-color 0.5s ease;
+}
