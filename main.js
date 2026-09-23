@@ -65,7 +65,7 @@ document.addEventListener("keydown", (event) => {
 });
 
  const keyColours = {
-    a: "#ff9ecf",
+    a: "#ff9ea1",
     b: "#ffb86c",
     c: "#ffd166",
     d: "#a8e6cf",
@@ -93,3 +93,19 @@ document.addEventListener("keydown", (event) => {
     z: "#f0abfc"
 };
 
+function changeBackground(colour) {
+
+    document.body.style.background = `
+        radial-gradient(
+            circle at center,
+            ${colour},
+            rgba(255, 255, 255, 0.35)
+        )
+    `;
+
+    document.body.classList.remove("colour-change");
+
+    void document.body.offsetWidth;
+
+    document.body.classList.add("colour-change");
+}
