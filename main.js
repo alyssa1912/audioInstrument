@@ -61,7 +61,7 @@ document.addEventListener("keydown", function(event) {
 document.addEventListener("keydown", (event) => {
     const key = event.key.toLowerCase();
 
-    document.body.style.backgroundColor = keyColours[key];
+document.body.style.backgroundColor = keyColours[key];
 });
 
  const keyColours = {
@@ -93,19 +93,3 @@ document.addEventListener("keydown", (event) => {
     z: "#f0abfc"
 };
 
-function changeBackground(colour) {
-
-    document.body.style.background = `
-        radial-gradient(
-            circle at center,
-            ${colour},
-            rgba(255, 255, 255, 0.35)
-        )
-    `;
-
-    document.body.classList.remove("colour-change");
-
-    void document.body.offsetWidth;
-
-    document.body.classList.add("colour-change");
-}
