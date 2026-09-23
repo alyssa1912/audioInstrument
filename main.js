@@ -80,6 +80,26 @@ document.addEventListener("keydown", (event) => {
     const key = event.key.toLowerCase();
 
 document.body.style.backgroundColor = keyColours[key];
+
+
+//---- image appearing -------
+if (keyImages[key]) {
+        const image = document.createElement("img");
+
+        image.src = keyImages[key];
+        image.classList.add("pop-image");
+
+        // adjust the position on screen
+        image.style.left = Math.random() * 80 + 10 + "vw";
+        image.style.top = Math.random() * 60 + 20 + "vh";
+
+        document.body.appendChild(image);
+
+        // Remove image after animation
+        setTimeout(() => {
+            image.remove();
+        }, 1500);
+    }
 });
 
  const keyColours = {
@@ -111,3 +131,15 @@ document.body.style.backgroundColor = keyColours[key];
     z: "#f0abfc"
 };
 
+const keyImages = {
+    a: "img/a.png",
+    b: "img/b.png",
+    e: "img/e.png"
+    m: "img/m.png"
+    o: "img/o.png"
+    s: "img/s.png"
+};
+
+
+
+   
