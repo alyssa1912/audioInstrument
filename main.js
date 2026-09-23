@@ -34,21 +34,39 @@ document.addEventListener("keydown", function(event) {
     // Check if the physical keyboard key pressed is A
     if (event.key.toLowerCase() === "a") {
             
-        const snapSound = new Audio("sounds/Asnap.mp3");
+        const snapSound = new Audio("sounds/a_snap.mp3");
         snapSound.play();
     }
 
 
     if (event.key.toLowerCase() === "b") {
 
-        const snapSound = new Audio("sounds/Asnap.mp3");
-        snapSound.play();
+        const balloonSound = new Audio("sounds/b_balloon.mp3");
+        balloonSound.play();
     }
 
-    if (event.key.toLowerCase() === "c") {
+    if (event.key.toLowerCase() === "e") {
 
-        const bubbleSound = new Audio("sounds/Cbubble.mp3");
-        bubbleSound.play();
+        const elephantSound = new Audio("sounds/e_elephant.mp3");
+        elephantSound.play();
+    }
+
+    if (event.key.toLowerCase() === "m") {
+
+        const mooSound = new Audio("sounds/m_moo.mp3");
+        mooSound.play();
+    }
+
+        if (event.key.toLowerCase() === "o") {
+
+        const owlSound = new Audio("sounds/o_owl.mp3");
+        owlSound.play();
+    }
+
+            if (event.key.toLowerCase() === "s") {
+
+        const shakeSound = new Audio("sounds/s_shake.mp3");
+        shakeSound.play();
     }
 });
 
