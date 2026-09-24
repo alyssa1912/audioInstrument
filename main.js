@@ -44,6 +44,12 @@ document.addEventListener("keydown", function(event) {
         balloonSound.play();
     }
 
+    if (event.key.toLowerCase() === "c") {
+
+        const chimeSound = new Audio("sounds/c_chime.mp3");
+        chimeSound.play();
+    }
+
     if (event.key.toLowerCase() === "e") {
 
         const elephantSound = new Audio("sounds/e_elephant.mp3");
@@ -60,6 +66,12 @@ document.addEventListener("keydown", function(event) {
 
         const owlSound = new Audio("sounds/o_owl.mp3");
         owlSound.play();
+    }
+
+    if (event.key.toLowerCase() === "p") {
+
+        const popSound = new Audio("sounds/p_pop.mp3");
+        popSound.play();
     }
 
             if (event.key.toLowerCase() === "s") {
@@ -136,6 +148,7 @@ if (keyImages[key]) {
 const keyImages = {
     a: { src: "img/a.png", size: "200px" },
     b: { src: "img/b.png", size: "200px" },
+    c: { src: "img/c.png", size: "200px" },
     e: { src: "img/e.png", size: "180px" },
     m: { src: "img/m.png", size: "200px" },
     o: { src: "img/o.png", size: "250px" },
