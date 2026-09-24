@@ -52,3 +52,11 @@ body {
     margin: 0;
     transition: background 0.8s ease;
 }
+
+.pop-image {
+    position: fixed;
+    width: 100px;
+    pointer-events: none;
+
+    animation: imageRise 1.5s ease-out forwards;
+}

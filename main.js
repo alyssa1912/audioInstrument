@@ -38,7 +38,6 @@ document.addEventListener("keydown", function(event) {
         snapSound.play();
     }
 
-
     if (event.key.toLowerCase() === "b") {
 
         const balloonSound = new Audio("sounds/b_balloon.mp3");
@@ -79,8 +78,10 @@ document.addEventListener("keydown", function(event) {
 document.addEventListener("keydown", (event) => {
     const key = event.key.toLowerCase();
 
-document.body.style.backgroundColor = keyColours[key];
 
+if (keyColours[key]) {
+document.body.style.backgroundColor = keyColours[key];
+}
 
 //---- image appearing -------
 if (keyImages[key]) {
@@ -95,7 +96,7 @@ if (keyImages[key]) {
 
         document.body.appendChild(image);
 
-        // Remove image after animation
+        // fade after animation
         setTimeout(() => {
             image.remove();
         }, 1500);
@@ -134,12 +135,9 @@ if (keyImages[key]) {
 const keyImages = {
     a: "img/a.png",
     b: "img/b.png",
-    e: "img/e.png"
-    m: "img/m.png"
-    o: "img/o.png"
-    s: "img/s.png"
+    e: "img/e.png",
+    m: "img/m.png",
+    o: "img/o.png",
+    s: "img/s.png",
 };
 
-
-
-   
