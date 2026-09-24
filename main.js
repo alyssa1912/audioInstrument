@@ -87,7 +87,8 @@ document.body.style.backgroundColor = keyColours[key];
 if (keyImages[key]) {
         const image = document.createElement("img");
 
-        image.src = keyImages[key];
+        image.src = keyImages[key].src;
+        image.style.width = keyImages[key].size;
         image.classList.add("pop-image");
 
         // adjust the position on screen
@@ -133,11 +134,11 @@ if (keyImages[key]) {
 };
 
 const keyImages = {
-    a: "img/a.png",
-    b: "img/b.png",
-    e: "img/e.png",
-    m: "img/m.png",
-    o: "img/o.png",
-    s: "img/s.png",
+    a: { src: "img/a.png", size: "200px" },
+    b: { src: "img/b.png", size: "200px" },
+    e: { src: "img/e.png", size: "180px" },
+    m: { src: "img/m.png", size: "200px" },
+    o: { src: "img/o.png", size: "250px" },
+    s: { src: "img/s.png", size: "250px" },
 };
 
