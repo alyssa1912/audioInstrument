@@ -24,35 +24,102 @@ introModal.close();
 
 
 
-// This is the instrument------------------------ //
+// This is the instrument ------------------------ //
 
 // const snapSound = new Audio("sounds/Asnap.mp3");
 
 
-document.addEventListener("keydown", function(event) {
+const starSounds = {
+    q: {
+    sound: "sounds/q.wav",
+    star: "star-q"
+    },
 
-    // Check if the physical keyboard key pressed is A
-    if (event.key.toLowerCase() === "a") {
-            
-        const snapSound = new Audio("sounds/Asnap.mp3");
-        snapSound.play();
-    }
+    w: {
+    sound: "sounds/w.wav",
+    star: "star-w"
+    },
 
+    e: {
+    sound: "sounds/e.wav",
+    star: "star-e"
+    },
 
-    if (event.key.toLowerCase() === "b") {
+    r: {
+    sound: "sounds/r.wav",
+    star: "star-r"
+    },
 
-        const chimeSound = new Audio("sounds/Bchime.mp3");
-        chimeSound.play();
-    }
+    t: {
+    sound: "sounds/t.wav",
+    star: "star-t"
+    },
 
-    if (event.key.toLowerCase() === "c") {
+    y: {
+    sound: "sounds/y.wav",
+    star: "star-y"
+    },
 
-        const bubbleSound = new Audio("sounds/Cbubble.mp3");
-        bubbleSound.play();
-    }
+    u: {
+    sound: "sounds/u.wav",
+    star: "star-u"
+    },
+
+    i: {
+    sound: "sounds/i.wav",
+    star: "star-i"
+    },
+
+    o: {
+    sound: "sounds/o.wav",
+    star: "star-o"
+    },
+
+    p: {
+    sound: "sounds/p.wav",
+    star: "star-p"
+    },
+};
+
+document.addEventListener("keydown", (event) => {
+
+    const key = event.key.toLowerCase();
+
+    if (!starSounds[key]) return;
+
+    // play sound
+    const audio = new Audio(starSounds[key].sound);
+    audio.play();
+
+    // finding the star
+    const star = document.getElementById(starSounds[key].star);
+
+    // flashing star
+    star.classList.add("star-active");
+
+    setTimeout(() => {
+    star.classList.remove("star-active");
+    }, 500);
+
 });
 
 
 // two different areas for imporvement, 1. the aesthetic & visuals 2. randomness.
 // create 3 branches for each improvement, meaning total 6 branches.
+
+
+const starMap = {
+q: document.getElementById("star-q"),
+w: document.getElementById("star-w"),
+e: document.getElementById("star-e"),
+r: document.getElementById("star-r"),
+t: document.getElementById("star-t"),
+y: document.getElementById("star-y"),
+u: document.getElementById("star-u"),
+i: document.getElementById("star-i"),
+o: document.getElementById("star-o"),
+p: document.getElementById("star-p")
+};
+
+
 

@@ -14,16 +14,41 @@
 @media (prefers-color-scheme: dark) {
     :root {
         --colour-01: #f0f6f0;
-        --colour-02: rgb(142, 162, 243);
-        --colour-03: lightgray;
-        --colour-04: darkgray;
+        --colour-02: rgb(16, 33, 100);
+        --colour-03: rgb(110, 120, 174);
+        --colour-04: rgb(41, 42, 109);
     }
 }
 
 body {
     font-family: "Work Sans", sans-serif;
-    background-color: var(--colour-02);
-    color: var(--colour-01);
+    color: white;
+    margin: 0;
+    min-height: 100vh;
+    
+    background:
+    radial-gradient(
+    circle at 50% 20%,
+    #4f619f 0%,
+    #3b4585 40%,
+    #29265d 75%,
+    #101240 100%
+    );
+}
+
+.background {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    
+    background:
+    radial-gradient(
+    circle at 50% 20%,
+    #4f619f 0%,
+    #3b4585 40%,
+    #29265d 75%,
+    #101240 100%
+    );
 }
 
 dialog[open] {
@@ -37,4 +62,187 @@ dialog[open] {
 
 button {
     border: var(--border);
+}
+
+
+/* ---Visuals--- */
+
+.moon-glow {
+    position: absolute;
+    top: 15%;
+    right: 10%;
+    
+    width: 160px;
+    height: 160px;
+    
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+}
+
+.moon {
+    position: absolute;
+    top: 17.5%;
+    right: 11.3%;
+    
+    width: 120px;
+    height: 120px;
+    
+    background: #fef5d9;
+    border-radius: 50%;
+}
+
+
+
+.ground {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 160px;
+    background: #8079b1;
+    clip-path: polygon(
+    0% 35%,
+    12% 55%,
+    25% 50%,
+    38% 10%,
+    50% 30%,
+    63% 55%,
+    78% 55%,
+    90% 20%,
+    100% 28%,
+    100% 100%,
+    0% 100%
+    );
+}
+
+/* ----- stars ---------------------- */
+.stars span {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 50%;
+    transition: all 0.5s ease;
+    
+}
+
+.star-active {
+    background: rgb(255, 255, 255);
+    transform: scale(2.5);
+
+    box-shadow:
+    0 0 10px rgb(254, 254, 254),
+    0 0 20px rgb(98, 145, 215),
+    0 0 50px rgb(47, 18, 134);
+}
+
+.stars span:nth-child(1) {
+    top: 18%;
+    left: 8%;
+}
+
+.stars span:nth-child(2) {
+    top: 30%;
+    left: 18%;
+}
+
+.stars span:nth-child(3) {
+    top: 18%;
+    left: 30%;
+}
+
+.stars span:nth-child(4) {
+    top: 18%;
+    left: 45%;
+}
+
+.stars span:nth-child(5) {
+    top: 22%;
+    left: 60%;
+}
+
+.stars span:nth-child(6) {
+    top: 35%;
+    left: 70%;
+}
+
+.stars span:nth-child(7) {
+    top: 38%;
+    left: 45%;
+}
+
+.stars span:nth-child(8) {
+    top: 15%;
+    left: 70%;
+}
+
+.stars span:nth-child(9) {
+    top: 45%;
+    left: 60%;
+}
+
+.stars span:nth-child(10) {
+    top: 45%;
+    left: 25%;
+}
+
+/* ----- trees ---------------------- */
+
+.tree {
+    position: absolute;
+    bottom: 180px;
+    left: 80%;
+}
+    
+.top {
+    width: 0;
+    height: 0;
+    position: absolute;
+    
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-bottom: 40px solid #120d35;
+    
+}
+
+.bottom {
+    width: 0;
+    height: 0;
+    
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 60px solid #120d35;
+    
+    position: absolute;
+    top: 25px;
+    left: -20px;
+}
+
+.trunk {
+    width: 12px;
+    height: 25px;
+    
+    background: #120d35;
+    
+    position: absolute;
+    top: 85px;
+    left: 25px;
+}
+
+.tree1 {
+    left: 10%;
+    top: 77%;
+    transform: scale(1);
+}
+
+.tree2 {
+    left: 80%;
+    top: 78%;
+    transform: scale(0.8);
+}
+
+.tree3 {
+    left: 88%;
+    top: 68.5%;
+    transform: scale(1.2);
 }
