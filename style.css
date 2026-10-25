@@ -36,6 +36,7 @@ body {
     );
 }
 
+
 .background {
     position: fixed;
     inset: 0;
@@ -87,7 +88,7 @@ button {
     width: 120px;
     height: 120px;
     
-    background: #fef5d9;
+    background: #f1e2b5;
     border-radius: 50%;
 }
 
@@ -115,6 +116,7 @@ button {
     );
 }
 
+
 /* ----- stars ---------------------- */
 .stars span {
     position: absolute;
@@ -122,12 +124,13 @@ button {
     height: 10px;
     background: white;
     border-radius: 50%;
-    transition: all 0.5s ease;
+    transition: opacity 0.5s ease, transform 0.5s ease, box-shadow 0.5s ease;
     
 }
 
+
 .star-active {
-    background: rgb(255, 255, 255);
+    opacity: 1;
     transform: scale(2.5);
 
     box-shadow:
@@ -136,55 +139,12 @@ button {
     0 0 50px rgb(47, 18, 134);
 }
 
-.stars span:nth-child(1) {
-    top: 18%;
-    left: 8%;
+.star-fade {
+    opacity: 0;
+    transform: scale(1);
+    box-shadow: none;
 }
 
-.stars span:nth-child(2) {
-    top: 30%;
-    left: 18%;
-}
-
-.stars span:nth-child(3) {
-    top: 18%;
-    left: 30%;
-}
-
-.stars span:nth-child(4) {
-    top: 18%;
-    left: 45%;
-}
-
-.stars span:nth-child(5) {
-    top: 22%;
-    left: 60%;
-}
-
-.stars span:nth-child(6) {
-    top: 35%;
-    left: 70%;
-}
-
-.stars span:nth-child(7) {
-    top: 38%;
-    left: 45%;
-}
-
-.stars span:nth-child(8) {
-    top: 15%;
-    left: 70%;
-}
-
-.stars span:nth-child(9) {
-    top: 45%;
-    left: 60%;
-}
-
-.stars span:nth-child(10) {
-    top: 45%;
-    left: 25%;
-}
 
 /* ----- trees ---------------------- */
 
