@@ -148,4 +148,3 @@ const keyImages = {
     p: { src: "img/p.png", size: "230px" },
     s: { src: "img/s.png", size: "250px" },
 };
-
