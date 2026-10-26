@@ -52,30 +52,6 @@ const starSounds = {
     z: { sound: "sounds/z.wav",}
 };
 
-    e: { sound: "sounds/e.wav",
-    },
-
-    r: { sound: "sounds/r.wav",
-    },
-
-    t: { sound: "sounds/t.wav",
-    },
-
-    y: { sound: "sounds/y.wav",
-    },
-
-    u: { sound: "sounds/u.wav",
-    },
-
-    i: { sound: "sounds/i.wav",
-    },
-
-    o: { sound: "sounds/o.wav",
-    },
-
-    p: { sound: "sounds/p.wav",
-    },
-};
 
 // find the stars container
 const starsContainer = document.querySelector(".stars");
