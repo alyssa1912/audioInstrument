@@ -23,11 +23,34 @@ introModal.close();
 
 
 const starSounds = {
-    q: { sound: "sounds/q.wav",
-    },
 
-    w: { sound: "sounds/w.wav",
-    },
+    a: { sound: "sounds/a.wav",},
+    b: { sound: "sounds/b.wav",},
+    c: { sound: "sounds/c.wav",},
+    d: { sound: "sounds/d.wav",},
+    e: { sound: "sounds/e.wav",},
+    f: { sound: "sounds/f.wav",},
+    g: { sound: "sounds/g.wav",},
+    h: { sound: "sounds/h.wav",},
+    i: { sound: "sounds/i.wav",},
+    j: { sound: "sounds/j.wav",},
+    k: { sound: "sounds/k.wav",},
+    l: { sound: "sounds/l.wav",},
+    m: { sound: "sounds/m.wav",},
+    n: { sound: "sounds/n.wav",},
+    o: { sound: "sounds/o.wav",},
+    p: { sound: "sounds/p.wav",},
+    q: { sound: "sounds/q.wav",},
+    r: { sound: "sounds/r.wav",},
+    s: { sound: "sounds/s.wav",},
+    t: { sound: "sounds/t.wav",},
+    u: { sound: "sounds/u.wav",},
+    v: { sound: "sounds/v.wav",},
+    w: { sound: "sounds/w.wav",},
+    x: { sound: "sounds/x.wav",},
+    y: { sound: "sounds/y.wav",},
+    z: { sound: "sounds/z.wav",}
+};
 
     e: { sound: "sounds/e.wav",
     },
@@ -122,16 +145,35 @@ document.addEventListener("keydown", (event) => {
 
 
 const starMap = {
-q: document.getElementById("star-q"),
-w: document.getElementById("star-w"),
+a: document.getElementById("star-a"),
+b: document.getElementById("star-b"),
+c: document.getElementById("star-c"),
+d: document.getElementById("star-d"),
 e: document.getElementById("star-e"),
-r: document.getElementById("star-r"),
-t: document.getElementById("star-t"),
-y: document.getElementById("star-y"),
-u: document.getElementById("star-u"),
+f: document.getElementById("star-f"),
+g: document.getElementById("star-g"),
+
+h: document.getElementById("star-h"),
 i: document.getElementById("star-i"),
+j: document.getElementById("star-j"),
+k: document.getElementById("star-k"),
+l: document.getElementById("star-l"),
+m: document.getElementById("star-m"),
+n: document.getElementById("star-n"),
 o: document.getElementById("star-o"),
-p: document.getElementById("star-p")
+p: document.getElementById("star-p"),
+
+q: document.getElementById("star-q"),
+r: document.getElementById("star-r"),
+s: document.getElementById("star-s"),
+t: document.getElementById("star-t"),
+u: document.getElementById("star-u"),
+v: document.getElementById("star-v"),
+
+w: document.getElementById("star-w"),
+x: document.getElementById("star-x"),
+y: document.getElementById("star-y"),
+z: document.getElementById("star-z")
 };
 
 
