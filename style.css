@@ -20,6 +20,7 @@
     }
 }
 
+
 body {
     font-family: "Work Sans", sans-serif;
     color: white;
@@ -65,6 +66,18 @@ button {
     border: var(--border);
 }
 
+/* --- fox --- */
+.fox {
+    position: absolute;
+    width: 60px;
+    bottom: 40px; 
+    left: 50%;
+    color: #61501d;
+    z-index: 1;
+
+    filter: brightness(0) saturate(100%) invert(6%) sepia(32%) saturate(2644%) hue-rotate(218deg) brightness(88%) contrast(105%);
+    z-index: 1;
+}
 
 /* ---Visuals--- */
 
@@ -220,8 +233,8 @@ button {
 }
 
 .tree1 {
-    left: 17%;
-    top: 57%;
+    left: 15%;
+    top: 58%;
     transform: scale(1);
 }
 
@@ -240,5 +253,5 @@ button {
 .tree4 {
     left: 5%;
     top: 70%;
-    transform: scale(1.4);
+    transform: scale(1.5);
 }
