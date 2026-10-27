@@ -56,12 +56,15 @@ const starSounds = {
 // find the stars container
 const starsContainer = document.querySelector(".stars");
 
-document.addEventListener("keydown", (event) => {
+document.addEventListener("keydown", function(event) {
 
     const key = event.key.toLowerCase();
-    if (!starSounds[key]) return;
+     if (!starSounds[key] || event.repeat) {
+        return;
+    }
 
-    const audio = new Audio(starSounds[key].sound);
+    // Play the sound
+    const audio = new Audio(starSounds[key]);
     audio.play();
 
 // creating a new star
@@ -77,24 +80,20 @@ star.classList.add("star");
 
     starsContainer.appendChild(star);
 
-// make the star glow
-    setTimeout(() => {
-        star.classList.add("star-active");
-    }, 10);
+// Make the star fade away
+    setTimeout(function() {
+        star.classList.add("star-fade");
+    }, 900);
 
-    setTimeout(() => {
-    star.classList.add("star-fade");
-
-    setTimeout(() => {
+// Remove the star
+    setTimeout(function() {
         star.remove();
-    }, 500);
-
-}, 900);
+    }, 1400);
 
 });
 
 
-
+// ------------------------?delete?------------------------ //
 
 document.addEventListener("keydown", (event) => {
 

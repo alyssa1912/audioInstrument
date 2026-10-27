@@ -148,6 +148,31 @@ button {
 
 /* ----- stars ---------------------- */
 
+.stars span {
+    position: absolute;
+    color: white;
+    font-size: 20px;
+    opacity: 0;
+    text-shadow: 0 0 8px white, 0 0 18px #6291d7;
+    animation: starPop 0.8s ease-out forwards;
+}
+
+@keyframes starPop {
+    0% {
+        opacity: 0;
+        transform: scale(0) rotate(-30deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(2) rotate(0deg);
+    }
+}
+
+.star-fade {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
 
 
 /* ---- star titl appear animation ---- */
