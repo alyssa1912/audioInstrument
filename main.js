@@ -64,12 +64,15 @@ document.addEventListener("keydown", function(event) {
     }
 
     // Play the sound
-    const audio = new Audio(starSounds[key]);
+    const audio = new Audio(starSounds[key].sound);
     audio.play();
 
-// creating a new star
+// creating a new star - chooses a random star png
 const star = document.createElement("span");
-star.classList.add("star");
+star.classList.add("star-pop");
+
+const randomStar = Math.floor(Math.random() * 8) + 1;
+star.style.backgroundImage = `url("img/${randomStar}.png")`;
 
 // MATH RANDOM TECHNIQUE - positions stars randomly in sky
     const randomLeft = Math.random() * 90 + 5;
@@ -92,63 +95,5 @@ star.classList.add("star");
 
 });
 
-
-// ------------------------?delete?------------------------ //
-
-document.addEventListener("keydown", (event) => {
-
-    const key = event.key.toLowerCase();
-
-    if (!starSounds[key]) return;
-
-    // play sound
-    const audio = new Audio(starSounds[key].sound);
-    audio.play();
-
-    // finding the star
-    const star = document.getElementById(starSounds[key].star);
-
-    // flashing star
-    star.classList.add("star-active");
-
-    setTimeout(() => {
-    star.classList.remove("star-active");
-    }, 500);
-
-});
-
-
-
-const starMap = {
-a: document.getElementById("star-a"),
-b: document.getElementById("star-b"),
-c: document.getElementById("star-c"),
-d: document.getElementById("star-d"),
-e: document.getElementById("star-e"),
-f: document.getElementById("star-f"),
-g: document.getElementById("star-g"),
-
-h: document.getElementById("star-h"),
-i: document.getElementById("star-i"),
-j: document.getElementById("star-j"),
-k: document.getElementById("star-k"),
-l: document.getElementById("star-l"),
-m: document.getElementById("star-m"),
-n: document.getElementById("star-n"),
-o: document.getElementById("star-o"),
-p: document.getElementById("star-p"),
-
-q: document.getElementById("star-q"),
-r: document.getElementById("star-r"),
-s: document.getElementById("star-s"),
-t: document.getElementById("star-t"),
-u: document.getElementById("star-u"),
-v: document.getElementById("star-v"),
-
-w: document.getElementById("star-w"),
-x: document.getElementById("star-x"),
-y: document.getElementById("star-y"),
-z: document.getElementById("star-z")
-};
 
 
