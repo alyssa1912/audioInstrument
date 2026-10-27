@@ -67,9 +67,19 @@ document.addEventListener("keydown", function(event) {
     const audio = new Audio(starSounds[key].sound);
     audio.play();
 
+    
+
 // creating a new star - chooses a random star png
 const star = document.createElement("span");
 star.classList.add("star-pop");
+
+// ring glow
+const ring = document.createElement("span");
+ring.classList.add("ring");
+
+star.appendChild(ring);
+
+
 
 const randomStar = Math.floor(Math.random() * 8) + 1;
 star.style.backgroundImage = `url("img/${randomStar}.png")`;
@@ -83,10 +93,6 @@ star.style.backgroundImage = `url("img/${randomStar}.png")`;
 
     starsContainer.appendChild(star);
 
-// Make the star fade away
-setTimeout(function() {
-    star.style.animation = "starFade 2s ease forwards";
-}, 2500);
 
 // Remove the star
 setTimeout(function() {
