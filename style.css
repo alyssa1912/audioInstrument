@@ -163,19 +163,29 @@ button {
 }
 
 .star-pop {
-    animation: starPop 0.8s ease-out forwards;
+    animation: starAnimation 4.5s ease forwards;
 }
 
-@keyframes starPop {
+@keyframes starAnimation {
     0% {
         opacity: 0;
-        transform: scale(0) rotate(-30deg);
-    }
+        transform: scale(0) rotate(-30deg); }
+
+    18% {
+        opacity: 1;
+        transform: scale(2) rotate(0deg); }
+
+    55% {
+        opacity: 1;
+        transform: scale(2) rotate(0deg); }
 
     100% {
-        opacity: 1;
-        transform: scale(2) rotate(0deg);
-    }
+        opacity: 0;
+        transform: scale(2) rotate(0deg); }
+}
+
+.star-pop::after {
+    animation: ringGlow 1s ease-out;
 }
 
 /* glowing ring around  star */
@@ -195,10 +205,6 @@ button {
     pointer-events: none;
 }
 
-.star-pop::after {
-    animation: ringGlow 1s ease-out;
-}
-
 @keyframes ringGlow {
     0% {
         opacity: 0.8;
@@ -209,11 +215,6 @@ button {
         opacity: 0;
         transform: scale(3);
     }
-}
-
-.star-fade {
-    opacity: 0;
-    transition: opacity 0.5s ease;
 }
 
 

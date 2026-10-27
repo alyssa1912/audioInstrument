@@ -84,16 +84,13 @@ star.style.backgroundImage = `url("img/${randomStar}.png")`;
     starsContainer.appendChild(star);
 
 // Make the star fade away
-    setTimeout(function() {
-        star.classList.add("star-fade");
-    }, 2500);
+setTimeout(function() {
+    star.style.animation = "starFade 2s ease forwards";
+}, 2500);
 
 // Remove the star
-    setTimeout(function() {
-        star.remove();
-    }, 3000);
+setTimeout(function() {
+    star.remove();
+}, 4500);
 
 });
-
-
-
