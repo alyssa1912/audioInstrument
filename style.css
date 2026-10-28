@@ -304,3 +304,27 @@ button {
   width: 100px;
 }
 
+
+
+/* Five letter boxes in one row */
+.intro-keys {
+  display: flex;
+  justify-content: center;
+}
+
+.intro-keys img {
+  width: 100px;
+}
+
+
+/* Let's play button */
+#intro-modal-close {
+  padding: 13px 35px;
+  border: none;
+  border-radius: 25px;
+  background: #b8a4ff;
+  color: #201638;
+  font-size: 17px;
+  font-weight: bold;
+}
+
