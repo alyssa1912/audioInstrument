@@ -278,3 +278,29 @@ button {
     top: 70%;
     transform: scale(1.5);
 }
+
+
+/* ------------- MODAL ------------------ */
+
+/* Modal background */
+.intro-modal {
+  width: min(800px, calc(100% - 40px));
+  box-sizing: border-box;
+  border: 1px solid #383838;
+  border-radius: 30px;
+  background: #1b1b1b;
+  color: #f5f2eb;
+}
+
+
+/* Sound icon and volume bars */
+.intro-icons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.intro-icons img {
+  width: 100px;
+}
+
