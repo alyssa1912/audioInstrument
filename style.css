@@ -214,8 +214,7 @@ button {
 
 .tree {
     position: absolute;
-    left: 80%;
-    transform-origin: bottom center;
+    
 }
     
 .top {
