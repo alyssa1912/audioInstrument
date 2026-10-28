@@ -14,9 +14,9 @@
 @media (prefers-color-scheme: dark) {
     :root {
         --colour-01: #f0f6f0;
-        --colour-02: rgb(16, 33, 100);
-        --colour-03: rgb(110, 120, 174);
-        --colour-04: rgb(41, 42, 109);
+        --colour-02: rgb(45, 46, 51);
+        --colour-03: rgb(45, 46, 51);
+        --colour-04: rgb(45, 46, 51);
     }
 }
 
@@ -56,7 +56,6 @@ body {
 dialog[open] {
     background-color: var(--colour-02);
     color: var(--colour-01);
-    border: var(--border);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -282,14 +281,23 @@ button {
 
 /* ------------- MODAL ------------------ */
 
-/* Modal background */
+/* background */
 .intro-modal {
   width: min(800px, calc(100% - 40px));
   box-sizing: border-box;
-  border: 1px solid #383838;
+  border: 3px solid #383838;
   border-radius: 30px;
   background: #1b1b1b;
   color: #f5f2eb;
+  padding: 50px 30px;
+}
+
+.intro-modal h2 {
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 300;     /* regular */
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 
@@ -303,7 +311,6 @@ button {
 .intro-icons img {
   width: 100px;
 }
-
 
 
 /* Five letter boxes in one row */
@@ -325,6 +332,8 @@ button {
   background: #b8a4ff;
   color: #201638;
   font-size: 17px;
-  font-weight: bold;
+
+  display: block;
+  margin: 20px auto 0;
 }
 
